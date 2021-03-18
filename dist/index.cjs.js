@@ -2104,7 +2104,7 @@ var socials = [
         items: [
             {
                 label: "English",
-                href: "https://t.me/mousefarm",
+                href: "https://t.me/farmhubbsc",
             },
             // {
             //   label: "Bahasa Indonesia",
@@ -2155,7 +2155,7 @@ var socials = [
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/MouseFarmBSC",
+        href: "https://twitter.com/FarmHubBSC",
     },
 ];
 var MENU_HEIGHT = 64;
