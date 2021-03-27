@@ -18,3 +18,5 @@ export { default as TradeIcon } from "./Trade";
 export { default as TwitterIcon } from "./Twitter";
 export { default as AuditIcon } from "./Audit";
 export { default as NestIcon } from "./Nest";
+export { default as GithubIcon } from "./Github";
+export { default as FarmhubIcon } from "./Farmhub";
