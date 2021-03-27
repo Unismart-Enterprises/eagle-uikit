@@ -2124,7 +2124,7 @@ var socials = [
         items: [
             {
                 label: "English",
-                href: "https://t.me/toadfarm",
+                href: "https://t.me/farmhubbsc",
             },
             // {
             //   label: "Bahasa Indonesia",
@@ -2170,12 +2170,16 @@ var socials = [
             //   label: "Whale Alert",
             //   href: "https://t.me/PancakeSwapWhales",
             // },
+            {
+                label: "Announcements",
+                href: "https://t.me/farmhubannouncements",
+            }
         ],
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/ToadFarmBSC",
+        href: "https://twitter.com/FarmhubBSC",
     },
 ];
 var MENU_HEIGHT = 64;
