@@ -9,6 +9,10 @@ interface Props {
   logout: () => void;
 }
 
+const buttonColor = {
+  color: 'black',
+}
+
 const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
@@ -27,6 +31,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
       ) : (
         <Button
           size="sm"
+          style={buttonColor}
           onClick={() => {
             onPresentConnectModal();
           }}
