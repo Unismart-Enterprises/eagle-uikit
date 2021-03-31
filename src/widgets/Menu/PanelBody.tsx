@@ -12,6 +12,10 @@ interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
 }
 
+interface SubIconElementProps {
+  icon?: string;
+}
+
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
 
 const Container = styled.div`
@@ -21,6 +25,14 @@ const Container = styled.div`
   overflow-x: hidden;
   height: 100%;
 `;
+
+function SubIconElement({ icon }: SubIconElementProps) {
+  if (icon) {
+    const Icon = Icons[icon];
+    return <Icon width="18px" mr="8px" />;
+  }
+  return null;
+}
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
@@ -49,6 +61,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               {isPushed &&
                 entry.items.map((item) => (
                   <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
+                    <SubIconElement icon={item.icon} />
                     <MenuLink href={item.href}>{item.label}</MenuLink>
                   </MenuEntry>
                 ))}
@@ -66,6 +79,10 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
       })}
     </Container>
   );
+};
+
+SubIconElement.defaultProps = {
+  icon: undefined,
 };
 
 export default PanelBody;
